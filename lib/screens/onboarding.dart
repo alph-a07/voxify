@@ -14,25 +14,32 @@ class Onboarding extends StatelessWidget {
     return SafeArea(
         child: Scaffold(
       body: SafeArea(
-        child: Column(
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                SvgPicture.asset(assetName, height: width * 0.1),
-                Padding(
-                  padding: EdgeInsets.symmetric(vertical: 0, horizontal: width * 0.05),
-                  child: const Text(
-                    'Voxify',
-                    style: TextStyle(
-                      decoration: TextDecoration.none,
-                      fontWeight: FontWeight.w600,
+        child: Padding(
+          padding: EdgeInsets.symmetric(vertical: 0.05 * height, horizontal: 0.1 * width),
+          child: Column(
+            children: [
+              SizedBox(
+                width: double.infinity,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Text(
+                      'Voxify',
+                      style: Theme.of(context).textTheme.displayLarge,
                     ),
-                  ),
-                )
-              ],
-            ),
-          ],
+                    Padding(
+                      padding: EdgeInsets.symmetric(
+                        vertical: height * 0.01,
+                        horizontal: 0,
+                      ),
+                      child: SvgPicture.asset(assetName, width: width * 0.1),
+                    ),
+                  ],
+                ),
+              )
+            ],
+          ),
         ),
       ),
     ));

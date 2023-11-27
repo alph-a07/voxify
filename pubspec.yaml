@@ -98,3 +98,7 @@ flutter:
               - asset: assets/fonts/Lato-BlackItalic.ttf
                 style: italic
                 weight: 900
+
+        - family: Bungee
+          fonts:
+              - asset: assets/fonts/Bungee-Regular.ttf
