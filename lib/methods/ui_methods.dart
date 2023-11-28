@@ -10,4 +10,11 @@ class UIMethods {
           : Brightness.dark,
     ));
   }
+
+  static Widget getFilledButton(Function() callback, String label) {
+    return FilledButton(
+      onPressed: callback,
+      child: Text(label),
+    );
+  }
 }
