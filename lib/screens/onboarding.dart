@@ -1,15 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import '../methods/ui_methods.dart';
 
 class Onboarding extends StatelessWidget {
   const Onboarding({super.key});
-
-  final String assetName = 'assets/images/voxify-dark.svg';
 
   @override
   Widget build(BuildContext context) {
     var width = MediaQuery.of(context).size.width;
     var height = MediaQuery.of(context).size.height;
+
+    final String assetName = Theme.of(context).brightness == Brightness.dark
+        ? 'assets/images/voxify-dark.svg'
+        : 'assets/images/voxify-light.svg';
+
+    UIMethods.setStatusBarColor(context);
 
     return SafeArea(
         child: Scaffold(
@@ -21,7 +26,6 @@ class Onboarding extends StatelessWidget {
               SizedBox(
                 width: double.infinity,
                 child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Text(
@@ -37,7 +41,8 @@ class Onboarding extends StatelessWidget {
                     ),
                   ],
                 ),
-              )
+              ),
+              SvgPicture.asset('assets/images/onboarding.svg'),
             ],
           ),
         ),

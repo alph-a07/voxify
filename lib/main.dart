@@ -12,21 +12,15 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AnnotatedRegion<SystemUiOverlayStyle>(
-      value: SystemUiOverlayStyle(
-        statusBarColor: Theme.of(context).colorScheme.brightness == Brightness.light
-            ? Colors.red
-            : Colors.yellow,
-      ),
-      child: MaterialApp(
-        debugShowCheckedModeBanner: false,
-        theme: custom_theme.Theme.lightTheme,
-        darkTheme: custom_theme.Theme.darkTheme,
-        initialRoute: '/',
-        routes: {
-          '/': (context) => const Onboarding(),
-        },
-      ),
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: custom_theme.Theme.lightTheme,
+      darkTheme: custom_theme.Theme.darkTheme,
+      themeMode: ThemeMode.system,
+      initialRoute: '/',
+      routes: {
+        '/': (context) => const Onboarding(),
+      },
     );
   }
 }
