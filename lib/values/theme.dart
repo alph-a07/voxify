@@ -35,7 +35,7 @@ class Theme {
       brightness: Brightness.light,
       background: MyColors.lightBackground,
     ),
-    fontFamily: 'Lato',
+    fontFamily: 'Inter',
     filledButtonTheme: FilledButtonThemeData(
       style: ButtonStyle(
         backgroundColor: MaterialStateColor.resolveWith(
@@ -74,7 +74,7 @@ class Theme {
       brightness: Brightness.dark,
       background: MyColors.darkBackground,
     ),
-    fontFamily: 'Lato',
+    fontFamily: 'Inter',
     filledButtonTheme: FilledButtonThemeData(
       style: ButtonStyle(
         backgroundColor: MaterialStateColor.resolveWith(

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:voxify/screens/onboarding.dart';
 import '../values/theme.dart' as custom_theme;
 
